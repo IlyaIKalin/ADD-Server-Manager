@@ -1,0 +1,249 @@
+{
+  "properties": {
+    "prefix": "ADD_Server_Manager",
+    "Mikero": "DePbo.dll.10.22",
+    "version": "26101223"
+  },
+  "entries": [
+    {
+      "path": "config.bin",
+      "size": 734,
+      "original": 734,
+      "sha256": "eb880a0fa30ce18615915780adccc3c8927ec1b60fdbbb028ecee9cf3c783557"
+    },
+    {
+      "path": "Data/inputs.xml",
+      "size": 143,
+      "original": 143,
+      "sha256": "711b74cb9822205ab051fb22f04079375ea25bbe021ec57d3675d46f84c9c0f4"
+    },
+    {
+      "path": "GUI/layouts/ADD_ReportMenu.layout",
+      "size": 1600,
+      "original": 1600,
+      "sha256": "833f3e9dbbce45ac688b00894326274c141bcc9c9bda03d45e0e2a922cfc37fb"
+    },
+    {
+      "path": "GUI/layouts/ADD_ReportRespawnButton.layout",
+      "size": 201,
+      "original": 201,
+      "sha256": "d294d7ba65158cae7da6fb716e86aa7f0b209b74c0c57edd4d620c5b1b078832"
+    },
+    {
+      "path": "Scripts/3_Game/ADD_Server_Manager/Core/ADD_Clock.c",
+      "size": 137,
+      "original": 137,
+      "sha256": "12d845fcd52b7827a980001c91c3ac4f88c9499bc0b84959ed711c7ecf9aaf7a"
+    },
+    {
+      "path": "Scripts/3_Game/ADD_Server_Manager/Core/ADD_Config.c",
+      "size": 3153,
+      "original": 3153,
+      "sha256": "404e091addfeffae3e7b7279506295104489d076c4fec9c90c5f6a6e00effa83"
+    },
+    {
+      "path": "Scripts/3_Game/ADD_Server_Manager/Core/ADD_Json.c",
+      "size": 10095,
+      "original": 10095,
+      "sha256": "00b3de824b1e0ba9a9282c2bccab8e69bebe048feab72c82cccf67aa0d828316"
+    },
+    {
+      "path": "Scripts/3_Game/ADD_Server_Manager/Core/ADD_Log.c",
+      "size": 1892,
+      "original": 1892,
+      "sha256": "e689fd42fd950f791fbce4a957c2168a4e8a83ed9aada859a29cbe8f124ab90a"
+    },
+    {
+      "path": "Scripts/3_Game/ADD_Server_Manager/Core/ADD_ModInfo.c",
+      "size": 660,
+      "original": 660,
+      "sha256": "989bff4424d7d5c7b733d1e727d8ebdeaa9e29f3223d31e07f77c8f7d16840d6"
+    },
+    {
+      "path": "Scripts/3_Game/ADD_Server_Manager/Core/ADD_Uuid.c",
+      "size": 237,
+      "original": 237,
+      "sha256": "22cb240a5fb2f0720bb9ec50bbe2c348c059a79cae733462e92a525f4486889e"
+    },
+    {
+      "path": "Scripts/3_Game/ADD_Server_Manager/Transport/ADD_Http.c",
+      "size": 11266,
+      "original": 11266,
+      "sha256": "dd5d760b4bd350248740c3f0394ceb95163cefc58a28f39676450235d1a6afcd"
+    },
+    {
+      "path": "Scripts/3_Game/ADD_Server_Manager/Transport/ADD_Publisher.c",
+      "size": 2392,
+      "original": 2392,
+      "sha256": "cd532dee00c1ef589e89fdd17416c9007b33f83f89b35dd6ba40d25a1e40667b"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Combat/ADD_CombatClassifier.c",
+      "size": 4441,
+      "original": 4441,
+      "sha256": "5b4fbfbe1cc61c0fe38a599f70c8e06452db7e6c6ebbcbf697f6f52e6bd274bd"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Combat/ADD_CombatHooks.c",
+      "size": 2233,
+      "original": 2233,
+      "sha256": "c6be268d699885dba58b28c7a074ef63433b31853af464030632fbace1295349"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Commands/ADD_CommandExecutor.c",
+      "size": 23650,
+      "original": 23650,
+      "sha256": "ce3faab026d93c6429a420969196832b666e8ace987dbe4948ca90adc274c6b8"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Journal/ADD_Journal.c",
+      "size": 10314,
+      "original": 10314,
+      "sha256": "0eefaf9563982abbdd4953ea8ab85ca36d7a88e361e971ab087ec3ad25ac466e"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Journal/ADD_JournalActions.c",
+      "size": 3461,
+      "original": 3461,
+      "sha256": "1c51f31d27a38604371c006b8da75622454deb75cc98c5f7805b3d51fc9f1b39"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Journal/ADD_JournalBuild.c",
+      "size": 3124,
+      "original": 3124,
+      "sha256": "196f6b0d04100fc59ad2045932df44b202170c8c299f0f1c74f7065150379310"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Journal/ADD_JournalHealth.c",
+      "size": 6550,
+      "original": 6550,
+      "sha256": "e865fc018fe0ca3934c7b111b25bf453b49f37e6fb7a3a9e0fed3864f21092eb"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Journal/ADD_JournalItems.c",
+      "size": 6449,
+      "original": 6449,
+      "sha256": "10762c01e93f9e1d4fb9b3fc00b40bb7db6fbaf2d77125d0574d6ba6c35f1dc8"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Journal/ADD_JournalVehicles.c",
+      "size": 3849,
+      "original": 3849,
+      "sha256": "889d276c1ed0970c40dbb41a20cfbec90345356a95945b052670ed10bcb36294"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Players/ADD_PlayerIdentity.c",
+      "size": 924,
+      "original": 924,
+      "sha256": "f22b74cc09bf888418ee6e29fdefe2f608da67f06a5d4aebc0a0e03dcca95582"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Players/ADD_Positions.c",
+      "size": 1911,
+      "original": 1911,
+      "sha256": "1ad4c2cf8936b5d3564a0747cfa744f783fb1c278b32abe6162419c293ab068e"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Players/ADD_Presence.c",
+      "size": 2438,
+      "original": 2438,
+      "sha256": "8d6c9ea8ce062de690de43af68499d833ad276215cad020180f68e2fe7015815"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Players/ADD_Sessions.c",
+      "size": 1258,
+      "original": 1258,
+      "sha256": "d7d755f390295dbba3b68eaec3a31e870e7bd709d0f5108101807827d51f8d24"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Reports/ADD_ReportRpc.c",
+      "size": 2717,
+      "original": 2717,
+      "sha256": "70f5e60da8e3687417043b57398225d8746892e6aad5e9a8fe7b0270fc0033d5"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Server/ADD_Heartbeat.c",
+      "size": 2589,
+      "original": 2589,
+      "sha256": "4c72c7b956c3489ff7e488f3dd04468afb4aa66501405f9962d81b071400a225"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/Server/ADD_Ticker.c",
+      "size": 1987,
+      "original": 1987,
+      "sha256": "12764e18f997eb59a13cddbc7cd53b2663f2df8e3fefe5d3870d5d91dbdd42bb"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/World/ADD_Chat.c",
+      "size": 708,
+      "original": 708,
+      "sha256": "467bcfe3d83e7366301a3df36f6d23867cbbbfa2c1419f576b8ce69a6700db4a"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/World/ADD_EntityChanges.c",
+      "size": 4014,
+      "original": 4014,
+      "sha256": "733a3a39acbfc01e4a2c9452bb999e62e30f37f1902954f576208a39bcb411f2"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/World/ADD_EntityHooks.c",
+      "size": 3980,
+      "original": 3980,
+      "sha256": "159e4f85eb5b0ac673e6186d1ead7a9c4b596490d4a464a963b8a2cdb1d491af"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/World/ADD_EntityRegistry.c",
+      "size": 4570,
+      "original": 4570,
+      "sha256": "c219da15e8a72dc41a7db9860c45ee8880224078210b9db33ae5cd16715ad76f"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/World/ADD_EntitySnapshots.c",
+      "size": 3844,
+      "original": 3844,
+      "sha256": "945649dd049cdfce7613561830e6fbb86f2234066d07b5d822ed49c89b17bc1a"
+    },
+    {
+      "path": "Scripts/4_World/ADD_Server_Manager/World/ADD_Spawnables.c",
+      "size": 1346,
+      "original": 1346,
+      "sha256": "516b8af848dff5171a11fcb2dc9cf9f3142f991e072abad1914dc32389806ada"
+    },
+    {
+      "path": "Scripts/5_Mission/ADD_Server_Manager/ADD_CommandPoll.c",
+      "size": 2833,
+      "original": 2833,
+      "sha256": "2c5a3b8d36193751e8ea2887378502f17951819ae47ad84a7dbcfcea1ae5e978"
+    },
+    {
+      "path": "Scripts/5_Mission/ADD_Server_Manager/ADD_MissionGameplay.c",
+      "size": 348,
+      "original": 348,
+      "sha256": "1a8073e58516aa7068daf400ef56e3b34f7f693307f331a51560dbbe16c6d88b"
+    },
+    {
+      "path": "Scripts/5_Mission/ADD_Server_Manager/ADD_MissionServer.c",
+      "size": 2573,
+      "original": 2573,
+      "sha256": "f824f3af5c701f771e15b6c751ab4c518b1aa59ec53f8cd9c047e39c6d025ef1"
+    },
+    {
+      "path": "Scripts/5_Mission/ADD_Server_Manager/ADD_ReportMenu.c",
+      "size": 1631,
+      "original": 1631,
+      "sha256": "af25c781dee21d7949b3f04bb34edc9983538b7a69428cb430b94443ec720e07"
+    },
+    {
+      "path": "Scripts/5_Mission/ADD_Server_Manager/ADD_RespawnDialogue.c",
+      "size": 547,
+      "original": 547,
+      "sha256": "1b952eec39949f539745925f514300386d548377cadec46b0fc95a932eff7430"
+    },
+    {
+      "path": "stringtable.csv",
+      "size": 721,
+      "original": 721,
+      "sha256": "f75b78cedc20ccd96967f8781879501575d176ec76280c095b0ab4abdba70444"
+    }
+  ]
+}

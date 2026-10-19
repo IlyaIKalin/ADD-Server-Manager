@@ -1,0 +1,639 @@
+{
+  "*app.SettingsView": [
+    {
+      "name": "All",
+      "type": "settings.All",
+      "tag": ""
+    },
+    {
+      "name": "Secrets",
+      "type": "map[string]bool",
+      "tag": "json:\"secrets\""
+    }
+  ],
+  "*config.Config": [
+    {
+      "name": "ListenHost",
+      "type": "string",
+      "tag": "yaml:\"listenHost\" json:\"listenHost\""
+    },
+    {
+      "name": "ListenPort",
+      "type": "int",
+      "tag": "yaml:\"listenPort\" json:\"listenPort\""
+    },
+    {
+      "name": "IngestPort",
+      "type": "int",
+      "tag": "yaml:\"ingestPort\" json:\"ingestPort\""
+    },
+    {
+      "name": "TLS",
+      "type": "config.TLS",
+      "tag": "yaml:\"tls\" json:\"tls\""
+    },
+    {
+      "name": "DataDir",
+      "type": "string",
+      "tag": "yaml:\"dataDir\" json:\"dataDir\""
+    },
+    {
+      "name": "AllowedSubnets",
+      "type": "[]string",
+      "tag": "yaml:\"allowedSubnets,omitempty\" json:\"allowedSubnets\""
+    },
+    {
+      "name": "SessionHours",
+      "type": "int",
+      "tag": "yaml:\"sessionHours\" json:\"sessionHours\""
+    },
+    {
+      "name": "path",
+      "type": "string",
+      "tag": ""
+    },
+    {
+      "name": "baseDir",
+      "type": "string",
+      "tag": ""
+    }
+  ],
+  "*config.TLS": [
+    {
+      "name": "Mode",
+      "type": "config.TLSMode",
+      "tag": "yaml:\"mode\" json:\"mode\""
+    },
+    {
+      "name": "CertFile",
+      "type": "string",
+      "tag": "yaml:\"certFile,omitempty\" json:\"certFile\""
+    },
+    {
+      "name": "KeyFile",
+      "type": "string",
+      "tag": "yaml:\"keyFile,omitempty\" json:\"keyFile\""
+    },
+    {
+      "name": "Domain",
+      "type": "string",
+      "tag": "yaml:\"domain,omitempty\" json:\"domain\""
+    },
+    {
+      "name": "Email",
+      "type": "string",
+      "tag": "yaml:\"email,omitempty\" json:\"email\""
+    }
+  ],
+  "*settings.All": [
+    {
+      "name": "General",
+      "type": "settings.General",
+      "tag": "json:\"general\""
+    },
+    {
+      "name": "Paths",
+      "type": "settings.Paths",
+      "tag": "json:\"paths\""
+    },
+    {
+      "name": "Steam",
+      "type": "settings.Steam",
+      "tag": "json:\"steam\""
+    },
+    {
+      "name": "SteamCMD",
+      "type": "settings.SteamCMD",
+      "tag": "json:\"steamcmd\""
+    },
+    {
+      "name": "Updates",
+      "type": "settings.Updates",
+      "tag": "json:\"updates\""
+    },
+    {
+      "name": "Server",
+      "type": "settings.Server",
+      "tag": "json:\"server\""
+    },
+    {
+      "name": "Process",
+      "type": "settings.Process",
+      "tag": "json:\"process\""
+    },
+    {
+      "name": "Logrotate",
+      "type": "settings.Logrotate",
+      "tag": "json:\"logrotate\""
+    },
+    {
+      "name": "Messages",
+      "type": "settings.Messages",
+      "tag": "json:\"messages\""
+    },
+    {
+      "name": "Tools",
+      "type": "settings.Tools",
+      "tag": "json:\"tools\""
+    },
+    {
+      "name": "Ingest",
+      "type": "settings.Ingest",
+      "tag": "json:\"ingest\""
+    },
+    {
+      "name": "Journal",
+      "type": "settings.Journal",
+      "tag": "json:\"journal\""
+    },
+    {
+      "name": "Notifications",
+      "type": "settings.Notifications",
+      "tag": "json:\"notifications\""
+    },
+    {
+      "name": "Firewall",
+      "type": "settings.Firewall",
+      "tag": "json:\"firewall\""
+    },
+    {
+      "name": "Players",
+      "type": "settings.Players",
+      "tag": "json:\"players\""
+    },
+    {
+      "name": "Backups",
+      "type": "settings.Backups",
+      "tag": "json:\"backups\""
+    }
+  ],
+  "*settings.Backups": [
+    {
+      "name": "IntervalHours",
+      "type": "int",
+      "tag": "json:\"intervalHours\" minimum:\"1\" maximum:\"720\""
+    },
+    {
+      "name": "Keep",
+      "type": "int",
+      "tag": "json:\"keep\" minimum:\"1\" maximum:\"100\""
+    },
+    {
+      "name": "JournalIntervalHours",
+      "type": "int",
+      "tag": "json:\"journalIntervalHours\" minimum:\"1\" maximum:\"720\""
+    },
+    {
+      "name": "JournalKeep",
+      "type": "int",
+      "tag": "json:\"journalKeep\" minimum:\"1\" maximum:\"100\""
+    },
+    {
+      "name": "PlayerIntervalHours",
+      "type": "int",
+      "tag": "json:\"playerIntervalHours\" minimum:\"1\" maximum:\"720\""
+    },
+    {
+      "name": "PlayerKeep",
+      "type": "int",
+      "tag": "json:\"playerKeep\" minimum:\"1\" maximum:\"100\""
+    }
+  ],
+  "*settings.Firewall": [
+    {
+      "name": "AutoCreateRules",
+      "type": "bool",
+      "tag": "json:\"autoCreateRules\""
+    }
+  ],
+  "*settings.General": [
+    {
+      "name": "Language",
+      "type": "string",
+      "tag": "json:\"language\" enum:\"ru,en\""
+    },
+    {
+      "name": "LogLevel",
+      "type": "string",
+      "tag": "json:\"logLevel\" enum:\"debug,info,warn,error\""
+    },
+    {
+      "name": "Timezone",
+      "type": "string",
+      "tag": "json:\"timezone\" doc:\"Local, UTC offset (+03:00) or IANA name\""
+    }
+  ],
+  "*settings.Ingest": [
+    {
+      "name": "Enabled",
+      "type": "bool",
+      "tag": "json:\"enabled\""
+    },
+    {
+      "name": "KillThresholdNotify",
+      "type": "bool",
+      "tag": "json:\"killThresholdNotify\""
+    }
+  ],
+  "*settings.Journal": [
+    {
+      "name": "RetentionDays",
+      "type": "int",
+      "tag": "json:\"retentionDays\" minimum:\"1\" maximum:\"3650\" doc:\"older calendar days are deleted one per day\""
+    },
+    {
+      "name": "QueueBatches",
+      "type": "int",
+      "tag": "json:\"queueBatches\" minimum:\"16\" maximum:\"10000\" doc:\"batches held in memory before spilling to disk\""
+    }
+  ],
+  "*settings.Logrotate": [
+    {
+      "name": "AppRotateMinutes",
+      "type": "int",
+      "tag": "json:\"appRotateMinutes\" minimum:\"0\""
+    },
+    {
+      "name": "AppKeepFiles",
+      "type": "int",
+      "tag": "json:\"appKeepFiles\" minimum:\"1\""
+    },
+    {
+      "name": "AuditKeepDays",
+      "type": "int",
+      "tag": "json:\"auditKeepDays\" minimum:\"1\" maximum:\"90\" doc:\"audit rows older than this are deleted, at most 90 days\""
+    },
+    {
+      "name": "JobsKeepDays",
+      "type": "int",
+      "tag": "json:\"jobsKeepDays\" minimum:\"1\" maximum:\"90\" doc:\"finished jobs older than this are deleted\""
+    },
+    {
+      "name": "HostKeepDays",
+      "type": "int",
+      "tag": "json:\"hostKeepDays\" minimum:\"1\" maximum:\"30\" doc:\"host load samples and notification deliveries in manager.db\""
+    }
+  ],
+  "*settings.Messages": [
+    {
+      "name": "Language",
+      "type": "string",
+      "tag": "json:\"language\" enum:\"ru,en\" doc:\"language of in-game messages\""
+    },
+    {
+      "name": "RestartWarning",
+      "type": "map[string]string",
+      "tag": "json:\"restartWarning\""
+    },
+    {
+      "name": "RestartNow",
+      "type": "map[string]string",
+      "tag": "json:\"restartNow\""
+    },
+    {
+      "name": "ModUpdateWarning",
+      "type": "map[string]string",
+      "tag": "json:\"modUpdateWarning\""
+    },
+    {
+      "name": "ModUpdateKickMessage",
+      "type": "map[string]string",
+      "tag": "json:\"modUpdateKickMessage\""
+    },
+    {
+      "name": "KickBeforeRestart",
+      "type": "map[string]string",
+      "tag": "json:\"kickBeforeRestart\""
+    },
+    {
+      "name": "KickReasonBeforeRestart",
+      "type": "map[string]string",
+      "tag": "json:\"kickReasonBeforeRestart\""
+    },
+    {
+      "name": "PlayerKickMessage",
+      "type": "map[string]string",
+      "tag": "json:\"playerKickMessage\""
+    },
+    {
+      "name": "LockBeforeRestart",
+      "type": "map[string]string",
+      "tag": "json:\"lockBeforeRestart\""
+    },
+    {
+      "name": "ServerUpdateRestartMessage",
+      "type": "map[string]string",
+      "tag": "json:\"serverUpdateRestartMessage\""
+    }
+  ],
+  "*settings.Notifications": [
+    {
+      "name": "DiscordWebhookSet",
+      "type": "bool",
+      "tag": "json:\"discordWebhookSet\" readOnly:\"true\""
+    },
+    {
+      "name": "TelegramTokenSet",
+      "type": "bool",
+      "tag": "json:\"telegramTokenSet\" readOnly:\"true\""
+    },
+    {
+      "name": "TelegramChatID",
+      "type": "string",
+      "tag": "json:\"telegramChatId\""
+    },
+    {
+      "name": "Language",
+      "type": "string",
+      "tag": "json:\"language\" enum:\"ru,en\""
+    }
+  ],
+  "*settings.Paths": [
+    {
+      "name": "ServersPath",
+      "type": "string",
+      "tag": "json:\"serversPath\""
+    },
+    {
+      "name": "SteamCmdPath",
+      "type": "string",
+      "tag": "json:\"steamCmdPath\""
+    },
+    {
+      "name": "LogsPath",
+      "type": "string",
+      "tag": "json:\"logsPath\""
+    },
+    {
+      "name": "VersionsPath",
+      "type": "string",
+      "tag": "json:\"versionsPath\""
+    },
+    {
+      "name": "BackupFolder",
+      "type": "string",
+      "tag": "json:\"backupFolder\" doc:\"folder inside each server root that stores file copies\""
+    }
+  ],
+  "*settings.Players": [
+    {
+      "name": "GeoIPEnabled",
+      "type": "bool",
+      "tag": "json:\"geoIpEnabled\""
+    },
+    {
+      "name": "GeoIPAutoUpdate",
+      "type": "bool",
+      "tag": "json:\"geoIpAutoUpdate\" doc:\"download DB-IP Lite (CC BY 4.0) monthly\""
+    },
+    {
+      "name": "GeoIPFile",
+      "type": "string",
+      "tag": "json:\"geoIpFile\" required:\"false\" doc:\"custom .mmdb (MaxMind or DB-IP country); empty = downloaded file\""
+    },
+    {
+      "name": "MaskIPs",
+      "type": "bool",
+      "tag": "json:\"maskIps\" doc:\"hide IP addresses from users without players.pii\""
+    }
+  ],
+  "*settings.Process": [
+    {
+      "name": "GracePeriod",
+      "type": "int",
+      "tag": "json:\"gracePeriod\" minimum:\"0\""
+    },
+    {
+      "name": "LowCpuThreshold",
+      "type": "float64",
+      "tag": "json:\"lowCpuThreshold\" minimum:\"0\""
+    },
+    {
+      "name": "LowCpuTimeoutOverride",
+      "type": "int",
+      "tag": "json:\"lowCpuTimeoutOverride\" minimum:\"0\""
+    },
+    {
+      "name": "ElevateLevel",
+      "type": "string",
+      "tag": "json:\"elevateLevel\" enum:\"low,below_normal,normal,above_normal,high,realtime\""
+    },
+    {
+      "name": "AffinityMask",
+      "type": "string",
+      "tag": "json:\"affinityMask\" doc:\"decimal bit mask of the manager process, empty = all cores\""
+    }
+  ],
+  "*settings.Server": [
+    {
+      "name": "ExecutableName",
+      "type": "string",
+      "tag": "json:\"executableName\""
+    },
+    {
+      "name": "ConfigName",
+      "type": "string",
+      "tag": "json:\"configName\""
+    },
+    {
+      "name": "StartupTimeout",
+      "type": "int",
+      "tag": "json:\"startupTimeout\" minimum:\"5\""
+    },
+    {
+      "name": "ShutdownTimeout",
+      "type": "int",
+      "tag": "json:\"shutdownTimeout\" minimum:\"1\""
+    },
+    {
+      "name": "ShutdownAttempts",
+      "type": "int",
+      "tag": "json:\"shutdownAttempts\" minimum:\"1\""
+    },
+    {
+      "name": "UseTaskkillOnStop",
+      "type": "bool",
+      "tag": "json:\"useTaskkillOnStop\""
+    },
+    {
+      "name": "EnableHangDetection",
+      "type": "bool",
+      "tag": "json:\"enableHangDetection\""
+    },
+    {
+      "name": "HangCheckIntervalSec",
+      "type": "int",
+      "tag": "json:\"hangCheckIntervalSec\" minimum:\"5\""
+    },
+    {
+      "name": "HangMaxNoResponseChecks",
+      "type": "int",
+      "tag": "json:\"hangMaxNoResponseChecks\" minimum:\"1\""
+    },
+    {
+      "name": "AutoRestartCrashed",
+      "type": "bool",
+      "tag": "json:\"autoRestartCrashed\""
+    },
+    {
+      "name": "AutoRestartDelay",
+      "type": "int",
+      "tag": "json:\"autoRestartDelay\" minimum:\"0\""
+    },
+    {
+      "name": "EnableCrashLoopGuard",
+      "type": "bool",
+      "tag": "json:\"enableCrashLoopGuard\""
+    },
+    {
+      "name": "CrashLoopThreshold",
+      "type": "int",
+      "tag": "json:\"crashLoopThreshold\" minimum:\"2\""
+    },
+    {
+      "name": "CrashLoopWindowSec",
+      "type": "int",
+      "tag": "json:\"crashLoopWindowSec\" minimum:\"30\""
+    },
+    {
+      "name": "AutostartDelay",
+      "type": "int",
+      "tag": "json:\"autostartDelay\" minimum:\"0\""
+    }
+  ],
+  "*settings.Steam": [
+    {
+      "name": "Username",
+      "type": "string",
+      "tag": "json:\"username\""
+    }
+  ],
+  "*settings.SteamCMD": [
+    {
+      "name": "DownloadTimeout",
+      "type": "int",
+      "tag": "json:\"downloadTimeout\" minimum:\"30\""
+    },
+    {
+      "name": "RetryCount",
+      "type": "int",
+      "tag": "json:\"retryCount\" minimum:\"0\" maximum:\"10\""
+    },
+    {
+      "name": "ModsMaxBatchSize",
+      "type": "int",
+      "tag": "json:\"modsMaxBatchSize\" minimum:\"1\" maximum:\"50\""
+    }
+  ],
+  "*settings.Store": [
+    {
+      "name": "db",
+      "type": "*db.DB",
+      "tag": ""
+    },
+    {
+      "name": "bus",
+      "type": "*bus.Bus",
+      "tag": ""
+    },
+    {
+      "name": "mu",
+      "type": "sync.RWMutex",
+      "tag": ""
+    },
+    {
+      "name": "cur",
+      "type": "settings.All",
+      "tag": ""
+    }
+  ],
+  "*settings.Tools": [
+    {
+      "name": "FileEditBackup",
+      "type": "bool",
+      "tag": "json:\"fileEditBackup\""
+    },
+    {
+      "name": "MaxFileSizeKB",
+      "type": "int",
+      "tag": "json:\"maxFileSizeKB\" minimum:\"16\""
+    }
+  ],
+  "*settings.Updates": [
+    {
+      "name": "CheckModUpdatesInterval",
+      "type": "int",
+      "tag": "json:\"checkModUpdatesInterval\" minimum:\"0\""
+    },
+    {
+      "name": "AutoUpdateMods",
+      "type": "bool",
+      "tag": "json:\"autoUpdateMods\""
+    },
+    {
+      "name": "AutoUpdateModsOnStartup",
+      "type": "bool",
+      "tag": "json:\"autoUpdateModsOnStartup\""
+    },
+    {
+      "name": "CheckServerUpdatesInterval",
+      "type": "int",
+      "tag": "json:\"checkServerUpdatesInterval\" minimum:\"0\""
+    },
+    {
+      "name": "AutoUpdateServers",
+      "type": "bool",
+      "tag": "json:\"autoUpdateServers\""
+    },
+    {
+      "name": "AutoUpdateServerOnStartup",
+      "type": "bool",
+      "tag": "json:\"autoUpdateServerOnStartup\""
+    },
+    {
+      "name": "AutoUpdateInstancesOnStartup",
+      "type": "bool",
+      "tag": "json:\"autoUpdateInstancesOnStartup\""
+    },
+    {
+      "name": "ModUpdateRestartDelay",
+      "type": "int",
+      "tag": "json:\"modUpdateRestartDelay\" minimum:\"0\""
+    },
+    {
+      "name": "ModUpdateMessageRestartSec",
+      "type": "int",
+      "tag": "json:\"modUpdateMessageRestartSec\" minimum:\"5\""
+    },
+    {
+      "name": "ModUpdateKickRestartSec",
+      "type": "int",
+      "tag": "json:\"modUpdateKickRestartSec\" minimum:\"0\""
+    },
+    {
+      "name": "ModUpdateLockRestartSec",
+      "type": "int",
+      "tag": "json:\"modUpdateLockRestartSec\" minimum:\"0\""
+    },
+    {
+      "name": "MergeWithScheduledWindowSec",
+      "type": "int",
+      "tag": "json:\"mergeWithScheduledWindowSec\" minimum:\"0\""
+    },
+    {
+      "name": "CheckModsBeforeScheduledRestartSec",
+      "type": "int",
+      "tag": "json:\"checkModsBeforeScheduledRestartSec\" minimum:\"0\""
+    },
+    {
+      "name": "DeepVerifyIntervalSec",
+      "type": "int",
+      "tag": "json:\"deepVerifyIntervalSec\" minimum:\"0\""
+    },
+    {
+      "name": "KeepGameDeltas",
+      "type": "int",
+      "tag": "json:\"keepGameDeltas\" minimum:\"1\""
+    }
+  ]
+}

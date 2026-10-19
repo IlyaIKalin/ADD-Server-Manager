@@ -1,0 +1,13 @@
+Language,original,english,russian
+STR_ADD_SORT,ADD,ADD,ADD
+STR_ADD_REPORT_OPEN,Report,Report,Жалоба
+STR_ADD_REPORT_TITLE,Report,Report,Жалоба
+STR_ADD_REPORT_SEND,Send,Send,Отправить
+STR_ADD_REPORT_CLOSE,Close,Close,Закрыть
+STR_ADD_REPORT_OK,Sent,Sent,Отправлено
+STR_ADD_REPORT_DISABLED,Reports are disabled,Reports are disabled,Жалобы выключены
+STR_ADD_REPORT_COOLDOWN,Wait before the next report,Wait before the next report,Подождите перед следующей жалобой
+STR_ADD_CAT_CHEAT,Cheat,Cheat,Чит
+STR_ADD_CAT_HARASSMENT,Harassment,Harassment,Оскорбления
+STR_ADD_CAT_BUG,Bug,Bug,Баг
+STR_ADD_CAT_OTHER,Other,Other,Другое

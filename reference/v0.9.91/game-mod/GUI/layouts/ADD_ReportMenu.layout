@@ -1,0 +1,85 @@
+FrameWidgetClass ADD_ReportRoot {
+ ignorepointer 0
+ position 0 0
+ size 1 1
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ {
+  PanelWidgetClass Panel {
+   ignorepointer 0
+   position 0.32 0.28
+   size 0.36 0.44
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   color 0.08 0.08 0.08 0.92
+   style rover_sim_black
+   {
+    TextWidgetClass Title {
+     ignorepointer 1
+     position 0.06 0.04
+     size 0.88 0.1
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "#STR_ADD_REPORT_TITLE"
+     font "gui/fonts/MetronBook24"
+    }
+    EditBoxWidgetClass MessageBox {
+     ignorepointer 0
+     position 0.06 0.18
+     size 0.88 0.28
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text ""
+    }
+    ButtonWidgetClass BtnCheat {
+     ignorepointer 0
+     position 0.06 0.5
+     size 0.42 0.12
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "#STR_ADD_CAT_CHEAT"
+    }
+    ButtonWidgetClass BtnOther {
+     ignorepointer 0
+     position 0.52 0.5
+     size 0.42 0.12
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "#STR_ADD_CAT_OTHER"
+    }
+    ButtonWidgetClass BtnSend {
+     ignorepointer 0
+     position 0.06 0.7
+     size 0.42 0.16
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "#STR_ADD_REPORT_SEND"
+    }
+    ButtonWidgetClass BtnClose {
+     ignorepointer 0
+     position 0.52 0.7
+     size 0.42 0.16
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "#STR_ADD_REPORT_CLOSE"
+    }
+   }
+  }
+ }
+}

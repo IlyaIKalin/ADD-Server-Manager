@@ -1,0 +1,15 @@
+{
+  "release": "https://github.com/K-aBa-N/ADD-Server-Manager/releases/tag/v0.9.91",
+  "tag_commit": "6fb0459ede231306facfbf10a4cbd11b197a7462",
+  "assets": {
+    "ADDServerManager.exe": {
+      "size": 61403136,
+      "sha256": "30b210ec80e5733e84ebd05a0cc694eaafedc53289221a0765605113639533c0"
+    },
+    "ADD_Server_Manager.pbo": {
+      "size": 140604,
+      "sha256": "212d5b3607d3ca0b7e6b15e9ddff1997e1ca631be627a54b85c6c5b65b207ff8"
+    }
+  },
+  "method": "Static extraction only; original executable was not run; backend source was not recovered."
+}
