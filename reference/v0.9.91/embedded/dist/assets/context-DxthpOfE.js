@@ -1,0 +1,1 @@
+import{At as e,kt as t}from"./naive-k3NtKHOm.js";t();var n=Symbol(`instance`);function r(){let t=e(n);if(!t)throw Error(`instance context is missing`);return t}export{r as n,n as t};

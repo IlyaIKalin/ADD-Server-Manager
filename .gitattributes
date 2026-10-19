@@ -1,3 +1,4 @@
 # Keep extracted release material byte-for-byte across platforms.
 reference/v0.9.91/** -text
 reference/v0.9.91/web-assets/** linguist-generated=true
+reference/v0.9.91/embedded/dist/** linguist-generated=true

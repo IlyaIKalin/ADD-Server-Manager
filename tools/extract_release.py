@@ -140,6 +140,55 @@ def extract_exe(data, output):
                 continue
     write_json(output / 'web-manifest.json', files)
 
+    # Walk the embed.FS file tables, including directory records, to recover
+    # HTML, fonts, images and original SQL migrations alongside JS/CSS.
+    def embedded_entry(position):
+        np, length, dp, size = struct.unpack_from('<QQQQ', data, position)
+        if not 1 <= length <= 180 or not 0 <= size < 10_000_000:
+            raise ValueError('Invalid embed entry')
+        start = offset(np)
+        filename = data[start:start + length].decode('ascii')
+        if not re.fullmatch(r'(dist|migrations)(/[A-Za-z0-9_.@/-]+)?', filename) or '..' in filename.split('/'):
+            raise ValueError('Invalid embed path')
+        content = data[offset(dp):offset(dp) + size] if size else b''
+        if len(content) != size:
+            raise ValueError('Truncated embed data')
+        return filename, content
+
+    tables, embedded = set(), {}
+    seed_patterns = [rb'dist/assets/index-[A-Za-z0-9_-]+\.js',
+                     rb'migrations/(?:journal|manager|players)/00001_init\.sql']
+    for pattern in seed_patterns:
+        for match in re.finditer(pattern, data):
+            reference = struct.pack('<QQ', address(match.start()), len(match.group()))
+            for ref in re.finditer(re.escape(reference), data):
+                start = ref.start()
+                try:
+                    embedded_entry(start)
+                except (ValueError, UnicodeError, struct.error):
+                    continue
+                while start >= 48:
+                    try:
+                        embedded_entry(start - 48)
+                        start -= 48
+                    except (ValueError, UnicodeError, struct.error):
+                        break
+                if start in tables:
+                    continue
+                tables.add(start)
+                for position in range(start, len(data) - 48, 48):
+                    try:
+                        filename, content = embedded_entry(position)
+                    except (ValueError, UnicodeError, struct.error):
+                        break
+                    if not content:
+                        continue
+                    path = output / 'embedded' / filename
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.write_bytes(content)
+                    embedded[filename] = {'size': len(content), 'sha256': hashlib.sha256(content).hexdigest()}
+    write_json(output / 'embedded-manifest.json', embedded)
+
     # Recover Go struct names, fields and tags, not executable Go source or defaults.
     names = [m.start() - 2 for m in re.finditer(rb'\*(?:settings\.[A-Za-z]+|config.Config)(?![A-Za-z])', data)]
     candidates = []
@@ -203,7 +252,8 @@ def main():
         'assets': {filename: {'size': len(contents[filename]), 'sha256': digest} for filename, digest in HASHES.items()},
         'method': 'Static extraction only; original executable was not run; backend source was not recovered.',
     })
-    print(f'Extracted {pbo_count} PBO entries, {web_count} built web assets and Go metadata.')
+    embedded_count = len(json.loads((args.output / 'embedded-manifest.json').read_text()))
+    print(f'Extracted {pbo_count} PBO entries, {web_count} JS/CSS assets, {embedded_count} embedded resources and Go metadata.')
 
 
 if __name__ == '__main__':
